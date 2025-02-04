@@ -3172,6 +3172,26 @@
     }
   },
   {
+    "coin": "CHIPS",
+    "sign_message_prefix": "Komodo Signed Message:\n",
+    "asset": "CHIPS",
+    "fname": "CHIPS",
+    "rpcport": 22778,
+    "txversion": 4,
+    "overwintered": 1,
+    "mm2": 1,
+    "required_confirmations": 10,
+    "avg_blocktime": 10,
+    "protocol": {
+      "type": "UTXO"
+    },
+    "derivation_path": "m/44'/141'",
+    "trezor_coin": "Komodo",
+    "links": {
+      "homepage": "https://chips.cash"
+    }
+  },
+  {
     "coin": "CHTA",
     "name": "cheetahcoin",
     "fname": "Cheetahcoin",
@@ -8036,8 +8056,8 @@
     "txfee": 1000,
     "mm2": 1,
     "sign_message_prefix": "Komodo Signed Message:\n",
-    "required_confirmations": 2,
-    "requires_notarization": true,
+    "required_confirmations": 3,
+    "requires_notarization": false,
     "avg_blocktime": 60,
     "protocol": {
       "type": "UTXO"
@@ -9183,6 +9203,25 @@
     "links": {
       "homepage": "https://mandala.exchange"
     }
+  },
+  {
+    "coin": "MDX-ERC20",
+    "name": "mdx_erc20",
+    "fname": "Mandala",
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 1,
+    "decimals": 18,
+    "avg_blocktime": 15,
+    "required_confirmations": 3,
+    "protocol": {
+      "type": "ERC20",
+      "protocol_data": {
+        "platform": "ETH",
+        "contract_address": "0x947AEb02304391f8fbE5B25D7D98D649b57b1788"
+      }
+    },
+    "derivation_path": "m/44'/60'"
   },
   {
     "coin": "MINDS-ERC20",
@@ -10382,6 +10421,29 @@
         "erc20_payment": 110000,
         "erc20_receiver_spend": 85000,
         "erc20_sender_refund": 85000
+    }
+  },
+  {
+    "coin": "FLOP",
+    "name": "flopcoin",
+    "fname": "Flopcoin",
+    "sign_message_prefix": "Flopcoin Signed Message:\n",
+    "rpcport": 32552,
+    "pubtype": 35,
+    "p2shtype": 22,
+    "wiftype": 158,
+    "txfee": 500000000,
+    "dust": 1000000,
+    "mm2": 1,
+    "required_confirmations": 2,
+    "avg_blocktime": 60,
+    "protocol": {
+      "type": "UTXO"
+    },
+    "derivation_path": "m/44'/3'",
+    "links": {
+      "github": "https://github.com/Flopcoin/Flopcoin",
+      "homepage": "https://flopcoin.net"
     }
   },
   {
@@ -13266,9 +13328,9 @@
     "derivation_path": "m/44'/60'"
   },
   {
-    "coin": "UIS",
+    "coin": "UIS-OLD",
     "name": "unitus",
-    "fname": "Unitus",
+    "fname": "Unitus (OLD)",
     "sign_message_prefix": "Unitus Signed Message:\n",
     "rpcport": 50604,
     "pubtype": 68,
@@ -13285,6 +13347,30 @@
     "derivation_path": "m/44'/723'",
     "links": {
       "github": "https://github.com/unitusdev/unitus",
+      "homepage": "https://unituscurrency.com"
+    }
+  },
+  {
+    "coin": "UIS",
+    "name": "unitus",
+    "fname": "Unitus",
+    "sign_message_prefix": "Unitus Signed Message:\n",
+    "isPoS": 1,
+    "rpcport": 15715,
+    "pubtype": 130,
+    "p2shtype": 85,
+    "wiftype": 153,
+    "txfee": 100000,
+    "segwit": false,
+    "mm2": 1,
+    "required_confirmations": 4,
+    "avg_blocktime": 60,
+    "protocol": {
+      "type": "UTXO"
+    },
+    "derivation_path": "m/44'/723'",
+    "links": {
+      "github": "https://github.com/WikiMin3R/Unitus-Nouveau",
       "homepage": "https://unituscurrency.com"
     }
   },
@@ -16896,6 +16982,108 @@
     "links": {
       "github": "https://github.com/seopub/zoincomumity",
       "homepage": "http://zoincommunity.com/"
+    }
+  },
+  {
+    "coin": "NFT_ETH",
+    "name": "nft_ethereum",
+    "fname": "Ethereum",
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 1,
+    "sign_message_prefix": "Ethereum Signed Message:\n",
+    "required_confirmations": 3,
+    "avg_blocktime": 15,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "ETH"
+      }
+    },
+    "derivation_path": "m/44'/60'"
+  },
+  {
+    "coin": "NFT_AVAX",
+    "name": "nft_avax",
+    "fname": "Avalanche",
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 43114,
+    "required_confirmations": 3,
+    "avg_blocktime": 2.4,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "AVAX"
+      }
+    },
+    "derivation_path": "m/44'/9000'",
+    "trezor_coin": "Avalanche C-Chain",
+    "links": {
+      "homepage": "https://www.avax.network/"
+    }
+  },
+  {
+    "coin": "NFT_BNB",
+    "name": "nft_binancesmartchain",
+    "fname": "Binance Coin",
+    "avg_blocktime": 3,
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 56,
+    "required_confirmations": 3,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "BNB"
+      }
+    },
+    "derivation_path": "m/44'/714'",
+    "trezor_coin": "Binance Smart Chain",
+    "links": {
+      "homepage": "https://www.binance.org"
+    }
+  },
+  {
+    "coin": "NFT_FTM",
+    "name": "nft_ftm",
+    "fname": "Fantom",
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 250,
+    "required_confirmations": 3,
+    "avg_blocktime": 1.8,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "FTM"
+      }
+    },
+    "derivation_path": "m/44'/1007'",
+    "trezor_coin": "Fantom Opera",
+    "links": {
+      "homepage": "https://fantom.foundation"
+    }
+  },
+  {
+    "coin": "NFT_MATIC",
+    "name": "nft_matic",
+    "fname": "Polygon",
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 137,
+    "avg_blocktime": 1.8,
+    "required_confirmations": 20,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "MATIC"
+      }
+    },
+    "derivation_path": "m/44'/966'",
+    "trezor_coin": "Polygon",
+    "links": {
+      "homepage": "https://polygon.technology/"
     }
   }
 ]

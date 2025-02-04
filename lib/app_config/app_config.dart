@@ -49,7 +49,7 @@ class AppConfig {
   String get appCompanyLong => 'Komodo Platform';
   String get appCompanyShort => 'Komodo';
 
-  final bool kIsWalletOnly = !kDebugMode;
+  final bool kIsWalletOnly = false;
 
   List<String> get defaultCoins => ['KMD', 'BTC-segwit'];
   List<String> get coinsFiat => ['BTC-segwit', 'KMD'];
@@ -216,7 +216,7 @@ class AppConfig {
 
   // endpoint source code (currently same as news feed endpoint):
   // https://github.com/KomodoPlatform/discord_feed_parser
-  bool get isUpdateCheckerEnabled => true;
+  bool get isUpdateCheckerEnabled => false;
   String get updateCheckerEndpoint => 'https://komodo.earth/adexversion';
 
   // endpoint source code:
@@ -227,7 +227,7 @@ class AppConfig {
   // endpoint source code:
   // https://github.com/KomodoPlatform/mobile_endpoints_proxy/blob/main/main.py#L95
   String get cryptoPricesEndpoint =>
-      'https://prices.komodo.earth/api/v2/tickers?expire_at=600';
+      'https://prices.komodo.earth/api/v2/tickers?expire_at=259200';
   String get cryptoPricesFallback =>
       'https://api.coingecko.com/api/v3/simple/price?ids=';
 
