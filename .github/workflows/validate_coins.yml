@@ -1,9 +1,8 @@
 name: Validate Coins
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
   push:
-    branches: [master, dev]
+    branches:
+      - ce
 
 jobs:
   validate-coins:
@@ -34,10 +33,10 @@ jobs:
           echo "hash=$(jq -r .coins_repo_commit coins_ci.json)" >> $GITHUB_ENV
         shell: bash
 
-      - name: Get coins.json and coins_config.json from KomodoPlatform/coins repo
+      - name: Get coins.json and coins_config.json from komodoce/coins-ce repo
         run: |
-          curl -O https://raw.githubusercontent.com/KomodoPlatform/coins/${hash}/coins
-          curl -O https://raw.githubusercontent.com/KomodoPlatform/coins/${hash}/utils/coins_config.json
+          curl -O https://raw.githubusercontent.com/komodoce/coins-ce/${hash}/coins
+          curl -O https://raw.githubusercontent.com/komodoce/coins-ce/${hash}/utils/coins_config.json
 
       - name: Compare coins.json
         run: json-diff assets/coins.json coins
