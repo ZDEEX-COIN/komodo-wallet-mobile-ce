@@ -50,7 +50,7 @@ jobs:
           cp android/app/src/main/cpp/libs/arm64-v8a/libmm2.a build/api-binaries/libmm2-arm64-v8a.a
       # Upload API binaries
       - name: Upload API binaries
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: api-binaries
           path: build/api-binaries/
@@ -58,12 +58,12 @@ jobs:
       - name: Build release APK
         run: flutter build apk --release --obfuscate --split-debug-info=build/debug-info/
       - name: Save generated APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: android-apk
           path: build/app/outputs/flutter-apk/app-release.apk
       - name: Save debug info
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: android-debug-info
           path: build/debug-info/
