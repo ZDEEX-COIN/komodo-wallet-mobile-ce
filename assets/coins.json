@@ -9398,7 +9398,7 @@
       "type": "ERC20",
       "protocol_data": {
         "platform": "MATIC",
-        "contract_address": "0x6f7C932e7684666C9fd1d44527765433e01fF61d"
+        "contract_address": "0xCF418b381F5BD54f24D68339f462b8A371e3e0eF"
       }
     },
     "derivation_path": "m/44'/60'",
