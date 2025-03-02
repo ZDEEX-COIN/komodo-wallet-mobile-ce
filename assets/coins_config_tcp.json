@@ -25261,7 +25261,7 @@
             "type": "ERC20",
             "protocol_data": {
                 "platform": "MATIC",
-                "contract_address": "0x6f7C932e7684666C9fd1d44527765433e01fF61d"
+                "contract_address": "0xCF418b381F5BD54f24D68339f462b8A371e3e0eF"
             }
         },
         "derivation_path": "m/44'/60'",
@@ -25273,7 +25273,7 @@
             "erc20_receiver_spend": 85000,
             "erc20_sender_refund": 85000
         },
-        "contract_address": "0x6f7C932e7684666C9fd1d44527765433e01fF61d",
+        "contract_address": "0xCF418b381F5BD54f24D68339f462b8A371e3e0eF",
         "parent_coin": "MATIC",
         "swap_contract_address": "0x9130b257D37A52E52F21054c4DA3450c72f595CE",
         "fallback_swap_contract": "0x9130b257D37A52E52F21054c4DA3450c72f595CE",
